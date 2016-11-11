@@ -23,13 +23,15 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="com.lanxiang.core" />
+        <module name="core" />
         <module name="jetty" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="com.lanxiang.core" target="1.5" />
-      <module name="jetty" target="1.5" />
-      <module name="root" target="1.5" />
+      <module name="core" target="1.7" />
+      <module name="jetty" target="1.7" />
+      <module name="root" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

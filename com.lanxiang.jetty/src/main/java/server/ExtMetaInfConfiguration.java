@@ -11,6 +11,8 @@ import java.util.Set;
 
 /**
  * Created by lanxiang on 2016/11/9.
+ *
+ * 加载swagger资源
  */
 public class ExtMetaInfConfiguration extends AbstractConfiguration {
 

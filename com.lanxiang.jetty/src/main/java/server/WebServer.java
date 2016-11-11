@@ -1,5 +1,6 @@
 package server;
 
+import com.lanxiang.servlet.guice.BootServletContextListener;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.Configuration;
@@ -31,9 +32,10 @@ public class WebServer {
             context.setConfigurations(new Configuration[]{
                     new WebXmlConfiguration(),
                     new WebInfConfiguration(),
+                    //自定义资源配置
                     new ExtMetaInfConfiguration()
             });
-            //TODO add eventlistener
+            context.addEventListener(new BootServletContextListener());
             //TODO add filter
             Server server = new Server(port);
             server.setHandler(context);
