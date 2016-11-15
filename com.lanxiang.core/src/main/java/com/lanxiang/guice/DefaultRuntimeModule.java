@@ -3,7 +3,6 @@ package com.lanxiang.guice;
 import com.google.inject.AbstractModule;
 import com.google.inject.Module;
 import com.lanxiang.core.Environment;
-import com.netflix.governator.ConfigurationModule;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ServiceLoader;
@@ -37,6 +36,7 @@ public class DefaultRuntimeModule extends AbstractModule {
         bind(Environment.class).toInstance(environment);
         //静态注入,但是没有带有inject注解的静态属性
         requestStaticInjection(GuiceEnvironment.class);
+        //TODO 加载配置文件Module
         install(new ConfigurationModule());
         installServiceModules();
     }
