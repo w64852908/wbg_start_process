@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/com.lanxiang.info/com.lanxiang.info.iml" filepath="$PROJECT_DIR$/com.lanxiang.info/com.lanxiang.info.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.lanxiang.core/core.iml" filepath="$PROJECT_DIR$/com.lanxiang.core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.lanxiang.jetty/jetty.iml" filepath="$PROJECT_DIR$/com.lanxiang.jetty/jetty.iml" />
       <module fileurl="file://$PROJECT_DIR$/root.iml" filepath="$PROJECT_DIR$/root.iml" />

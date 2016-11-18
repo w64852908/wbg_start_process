@@ -37,6 +37,9 @@ public class WebServer {
             });
             context.addEventListener(new BootServletContextListener());
             //TODO add filter
+
+            //TODO set jersey property to jetty
+
             Server server = new Server(port);
             server.setHandler(context);
             server.start();
