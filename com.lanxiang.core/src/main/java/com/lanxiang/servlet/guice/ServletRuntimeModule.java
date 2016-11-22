@@ -1,4 +1,4 @@
-package com.lanxiang.guice;
+package com.lanxiang.servlet.guice;
 
 import com.google.inject.Provides;
 import com.google.inject.servlet.ServletModule;

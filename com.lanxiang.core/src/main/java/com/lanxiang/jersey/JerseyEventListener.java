@@ -13,7 +13,6 @@ import javax.ws.rs.ext.Provider;
  */
 
 @Slf4j
-//该注解有什么用?
 @Provider
 public class JerseyEventListener implements ApplicationEventListener {
 

@@ -9,6 +9,5 @@ import com.lanxiang.jersey.JerseyEventListener;
 public class CoreModule extends AbstractModule {
     @Override
     protected void configure() {
-        bind(JerseyEventListener.class);
     }
 }

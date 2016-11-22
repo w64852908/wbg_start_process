@@ -1,7 +1,13 @@
+com/lanxiang/guice/CoreModule.class
 com/lanxiang/guice/ServletRuntimeModule.class
-com/lanxiang/core/Environment.class
 com/lanxiang/guice/GuiceEnvironment.class
+com/lanxiang/core/Environment.class
+com/lanxiang/jersey/JerseyEventListener$1.class
 com/lanxiang/guice/DefaultRuntimeModule$1.class
+com/lanxiang/core/web/guice/CoreWebModule.class
+com/lanxiang/core/web/WebApplication.class
 com/lanxiang/servlet/guice/BootServletContextListener.class
+com/lanxiang/guice/ConfigurationModule.class
 com/lanxiang/servlet/CharacterEncodingFilter.class
 com/lanxiang/guice/DefaultRuntimeModule.class
+com/lanxiang/jersey/JerseyEventListener.class

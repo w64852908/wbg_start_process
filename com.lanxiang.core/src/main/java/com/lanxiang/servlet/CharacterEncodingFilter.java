@@ -1,11 +1,13 @@
 package com.lanxiang.servlet;
 
+import javax.inject.Singleton;
 import javax.servlet.*;
 import java.io.IOException;
 
 /**
  * Created by lanxiang on 2016/11/11.
  */
+@Singleton
 public class CharacterEncodingFilter implements Filter {
 
     private String encoding = "UTF-8";

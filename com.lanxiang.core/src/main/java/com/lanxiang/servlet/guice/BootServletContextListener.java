@@ -5,7 +5,6 @@ import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.servlet.GuiceServletContextListener;
 import com.lanxiang.guice.DefaultRuntimeModule;
-import com.lanxiang.guice.ServletRuntimeModule;
 import com.netflix.governator.guice.LifecycleInjector;
 import com.netflix.governator.lifecycle.LifecycleManager;
 import com.squarespace.jersey2.guice.BootstrapModule;

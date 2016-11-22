@@ -1,6 +1,7 @@
 package server;
 
 import com.lanxiang.servlet.guice.BootServletContextListener;
+import com.lanxiang.servlet.guice.GuiceWebFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.Configuration;
@@ -36,9 +37,9 @@ public class WebServer {
                     new ExtMetaInfConfiguration()
             });
             context.addEventListener(new BootServletContextListener());
-            //TODO add filter
 
-            //TODO set jersey property to jetty
+
+            context.addFilter(GuiceWebFilter.class, "/*", null);
 
             Server server = new Server(port);
             server.setHandler(context);
