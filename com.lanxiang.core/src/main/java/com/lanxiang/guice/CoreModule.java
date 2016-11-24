@@ -1,6 +1,8 @@
 package com.lanxiang.guice;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.AbstractModule;
+import com.lanxiang.jackson.BaseObjectMapperProvider;
 import com.lanxiang.jersey.JerseyEventListener;
 
 /**
@@ -9,5 +11,6 @@ import com.lanxiang.jersey.JerseyEventListener;
 public class CoreModule extends AbstractModule {
     @Override
     protected void configure() {
+        bind(ObjectMapper.class).toProvider(BaseObjectMapperProvider.class).asEagerSingleton();
     }
 }

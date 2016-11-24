@@ -1,6 +1,7 @@
 package com.lanxiang.core.web.guice;
 
 import com.google.inject.*;
+import com.lanxiang.core.web.ObjectMapperResolver;
 import com.lanxiang.core.web.WebApplication;
 import lombok.extern.slf4j.Slf4j;
 import org.glassfish.jersey.filter.LoggingFilter;
@@ -19,7 +20,7 @@ public class CoreWebModule extends AbstractModule {
 
     @Override
     protected void configure() {
-
+        bind(ObjectMapperResolver.class).asEagerSingleton();
     }
 
     @Singleton
