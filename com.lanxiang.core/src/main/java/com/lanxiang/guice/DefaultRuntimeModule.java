@@ -32,10 +32,10 @@ public class DefaultRuntimeModule extends AbstractModule {
             }
         });
 
-        GuiceEnvironment environment = new GuiceEnvironment();
-        bind(Environment.class).toInstance(environment);
-        //静态注入,但是没有带有inject注解的静态属性
-        requestStaticInjection(GuiceEnvironment.class);
+//        GuiceEnvironment environment = new GuiceEnvironment();
+//        bind(Environment.class).toInstance(environment);
+//        //静态注入,但是没有带有inject注解的静态属性
+//        requestStaticInjection(GuiceEnvironment.class);
         //TODO 加载配置文件Module
         install(new ConfigurationModule());
         installServiceModules();

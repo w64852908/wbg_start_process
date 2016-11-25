@@ -1,5 +1,6 @@
 package com.lanxiang.info.rest;
 
+import com.lanxiang.info.model.SystemInfo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -13,6 +14,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by lanxiang on 2016/11/15.
@@ -39,5 +42,20 @@ public class InfoRestServiceImpl {
     @ApiOperation("获取当前时间")
     public String getCurrentTime() {
         return format.format(new Date());
+    }
+
+    @GET
+    @Path("system")
+    @ApiOperation("获取系统环境")
+    public SystemInfo getSystemInfo() {
+        SystemInfo systemInfo = new SystemInfo();
+        systemInfo.setEnvironmentMap(System.getenv());
+        Map<String, String> propertyMap = new HashMap<>();
+        for (Object key : System.getProperties().keySet()) {
+            String value = System.getProperties().get(key).toString();
+            propertyMap.put(key.toString(), value);
+        }
+        systemInfo.setPropertyMap(propertyMap);
+        return systemInfo;
     }
 }
