@@ -24,6 +24,8 @@ public class WebServer {
         String path = "/";
         String uri = "http://" + host + ":" + port + path;
         try {
+            Server server = new Server(port);
+
             WebAppContext context = new WebAppContext();
             context.setDisplayName("JettyContext");
             context.setThrowUnavailableOnStartupException(true);
@@ -37,11 +39,8 @@ public class WebServer {
                     new ExtMetaInfConfiguration()
             });
             context.addEventListener(new BootServletContextListener());
-
-
             context.addFilter(GuiceWebFilter.class, "/*", null);
 
-            Server server = new Server(port);
             server.setHandler(context);
             server.start();
             log.info("Application started at {}", uri);

@@ -40,7 +40,7 @@ public class BootServletContextListener extends GuiceServletContextListener {
             manager = injector.getInstance(LifecycleManager.class);
             manager.start();
         } catch (Throwable t) {
-            log.warn("LifecycleManager failed to start", t.getCause());
+            log.warn("LifecycleManager failed to start", t);
         }
     }
 
@@ -49,7 +49,7 @@ public class BootServletContextListener extends GuiceServletContextListener {
         try {
             manager.close();
         } catch (Throwable t) {
-            log.warn("LifecycleManager failed to close", t.getCause());
+            log.warn("LifecycleManager failed to close", t);
         }
         ILoggerFactory factory = LoggerFactory.getILoggerFactory();
         log.info("Logger factory: {}", factory);
@@ -70,7 +70,7 @@ public class BootServletContextListener extends GuiceServletContextListener {
         try {
             initInjector();
         } catch (Throwable t) {
-            log.error("Failed to init guice injector.", t.getCause());
+            log.error("Failed to init guice injector.", t);
         }
         return injector;
     }
